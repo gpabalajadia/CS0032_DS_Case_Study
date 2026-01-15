@@ -20163,9 +20163,12 @@ ALTER TABLE `segmentation_results`
 --
 -- Constraints for dumped tables
 --
-ALTER TABLE customers
-PARTITION BY HASH(customer_id)
-PARTITIONS 8;
+
+-- **OPTIONAL - NEED TO REMOVE CONSTRAINT BELOW FOR PARTITION TO WORK**
+
+-- ALTER TABLE customers
+-- PARTITION BY HASH(customer_id)
+-- PARTITIONS 8;
 --
 -- Constraints for table `segmentation_results`
 --
